@@ -1,7 +1,8 @@
 # EvidenceBasedQuery
 ## Our approach
 In this project, we experimented on evidence based query for the query focused summarization (QFS) task.
-Here, we showed that evidence (common words between document and summary) can be used as query for QFS task.
+Here, we showed that evidence (common words between document and summary) can be used as query for QFS task. 
+To avoid data bypassing, we fine tuned T5 model with CNN/DM data set for evidence generation task. Then, using this evidence model, we performed QFS task on Debatepedia data set.
 
 A. For the evidence keywords, we first extracted evidence from news articles and their corresponding highlights of CNN/DM data set.
 
@@ -9,7 +10,7 @@ B. Then we fine tuned T5 model with news articles and evidences of CNN/DM data s
 
 C. Using this Evidence Model, we generated evidences for the Debatepedia data set.
 
-D. Finally, we fine tuned several models (Pegasus, BART, ... ) for QFS task. We used rank based method where we ranked the sentences of the documents according to the query. For the comparison, we used two types of queries for QFS tasks: 
+D. Finally, we fine tuned several models (Pegasus, BART, ... ) for QFS task on Debatepedia data set. We used rank based method where we ranked the sentences of the documents according to the query. For the comparison, we used two types of queries for QFS tasks: 
 1. query came with debatepedia data set, and 
 2. our generated evidence as query.
 ## About files

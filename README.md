@@ -18,3 +18,4 @@ D. Finally, we fine tuned several models (Pegasus, BART, ... ) for QFS task on D
 2. EvidenceModel.ipynb: To perform task B.
 3. EvidenceGeneration.ipynb: To perform task C. Using this script, we generated and incorporated evidences on the debatepedia data set (debatepediaEvidence_train.json, debatepediaEvidence_valid.json and debatepediaEvidence_test.json).
 4. Fine_Tune_Pegasus.ipynb: To perform task D. 
+5. Fine_Tune_BART.ipynb: To perform task D.

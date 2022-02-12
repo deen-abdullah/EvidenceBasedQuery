@@ -1,6 +1,6 @@
 # EvidenceBasedQuery
 ## Our approach
-We generated an evidence-based query for the query-focused summarization (QFS) task in this experiment. Here, we showed that evidence (common words between document and summary) could be used as a query for the QFS task. First, we fine-tuned the T5 model with CNN/DM data set for the evidence generation task to avoid target leakage. Then, using this evidence model, we generated evidence-based queries and performed the QFS task on the Debatepedia data set.
+We generated an evidence-based query for the query-focused summarization (QFS) task in this experiment. Here, we showed that evidence (common words between document and summary) could be used as a query for the QFS task. We used a transfer learning approach to avoid target leakage. First, we fine-tuned the T5 model with CNN/DM data set for the evidence generation task. Then, using this evidence model, we generated evidence-based queries and performed the QFS task on the Debatepedia data set.
 
 A. For the evidence keywords, we first extracted evidence keywords from news articles and their corresponding highlights of the CNN/DM data set.
 

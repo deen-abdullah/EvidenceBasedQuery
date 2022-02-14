@@ -1,16 +1,16 @@
 # EvidenceBasedQuery
 ## Our approach
-We generated an evidence-based query for the query-focused summarization (QFS) task in this experiment. Here, we showed that evidence (common words between document and summary) could be used as a query for the QFS task. We used a transfer learning approach to avoid target leakage. First, we fine-tuned the T5 model with CNN/DM data set for the evidence generation task. Then, using this evidence model, we generated evidence-based queries and performed the QFS task on the Debatepedia data set.
+In this experiment, we developed an evidence-based model to generate evidence-based queries for the query-focused summarization (QFS) task. Here, we showed that evidence (common words between document and summary) could be used as a query for the QFS task. We used a transfer learning approach to avoid target leakage. First, we fine-tuned the T5 model with CNN/DM data set for the evidence generation task. Then, using this evidence-based model, we generated evidence-based queries and performed the QFS task on the Debatepedia data set.
 
 A. For the evidence keywords, we first extracted evidence keywords from news articles and their corresponding highlights of the CNN/DM data set.
 
-B. Then, we fine-tuned the T5 model with news articles and evidence keywords of the CNN/DM data set. This trained Evidence Model can predict evidence keywords for a given document.
+B. Then, we fine-tuned the T5 model with news articles and evidence keywords of the CNN/DM data set. This trained Evidence-based model can predict evidence keywords for a given document.
 
-C. Using this Evidence Model, we generated evidence-based queries for the Debatepedia data set.
+C. Using this Evidence-based model, we generated evidence-based queries for the Debatepedia data set.
 
-D. Finally, we fine-tuned several models (Pegasus, BART, RoBERTa and LED) for the QFS task on the Debatepedia data set. We used the rank-based method, where we ranked the sentences of the documents according to the evidence-based queries. For the comparison, we used two types of queries for QFS tasks: 
+D. Finally, we fine-tuned several models (Pegasus, BART, RoBERTa and LED) for the QFS task on the Debatepedia data set. We used the rank-based method, where we ranked the sentences of the documents according to the evidence-based queries. For the comparison, we used two types of queries for the QFS tasks: 
 1. queries came with Debatepedia data set, and 
-2. our generated evidence as queries.
+2. our generated evidences as queries.
 ## About files
 1. EvidenceExtraction.ipynb: To perform task A.
 2. EvidenceModel.ipynb: To perform task B.

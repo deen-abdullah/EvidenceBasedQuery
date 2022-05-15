@@ -8,14 +8,16 @@ B. Then, we fine-tuned the T5 model with news articles and evidence keywords of 
 
 C. Using this Evidence-based model, we generated evidence-based queries for the Debatepedia data set.
 
-D. Finally, we fine-tuned several models (Pegasus, BART, RoBERTa and LED) for the QFS task on the Debatepedia data set. We used the rank-based method, where we ranked the sentences of the documents according to the evidence-based queries. For the comparison, we used two types of queries for the QFS tasks: 
-1. queries came with Debatepedia data set, and 
+D. Finally, we fine-tuned several models (Pegasus, BART, RoBERTa and LED) for the QFS task on the Debatepedia data set. We used the rank-based method, where we ranked the sentences of the documents according to the evidence-based queries. Additionally, we perform another experiment using QuerySum (Xu and Lapata, 2020), a state-of-the-art QFS model to compare the results of the given queries and the evidence-based quries of TD-QFS data set.
+
+ For the comparison, we used two types of queries for the QFS tasks:
+1. queries came with Debatepedia and TD-QFS data sets, and
 2. our generated evidences as queries.
 ## About files
 1. EvidenceExtraction.ipynb: To perform task A.
 2. EvidenceModel.ipynb: To perform task B.
 3. EvidenceGeneration.ipynb: To perform task C. Using this script, we generated and incorporated evidence-based queries in the debatepedia data set (debatepediaEvidence_train.json, debatepediaEvidence_valid.json and debatepediaEvidence_test.json).
-4. Fine_Tune_Pegasus.ipynb: To perform task D. 
+4. Fine_Tune_Pegasus.ipynb: To perform task D.
 5. Fine_Tune_BART.ipynb: To perform task D.
 6. Fine_Tune_RoBERTa.ipynb: To perform task D.
 7. Fine_Tune_LED.ipynb: To perform task D.
